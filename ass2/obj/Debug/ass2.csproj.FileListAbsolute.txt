@@ -1,0 +1,14 @@
+C:\Users\Asus\Desktop\hệ cơ sở dư liệu\ass2\src\ass2\ass2\bin\Debug\ass2.exe.config
+C:\Users\Asus\Desktop\hệ cơ sở dư liệu\ass2\src\ass2\ass2\bin\Debug\ass2.exe
+C:\Users\Asus\Desktop\hệ cơ sở dư liệu\ass2\src\ass2\ass2\bin\Debug\ass2.pdb
+C:\Users\Asus\Desktop\hệ cơ sở dư liệu\ass2\src\ass2\ass2\obj\Debug\ass2.csprojAssemblyReference.cache
+C:\Users\Asus\Desktop\hệ cơ sở dư liệu\ass2\src\ass2\ass2\obj\Debug\ass2.fLogin.resources
+C:\Users\Asus\Desktop\hệ cơ sở dư liệu\ass2\src\ass2\ass2\obj\Debug\ass2.Properties.Resources.resources
+C:\Users\Asus\Desktop\hệ cơ sở dư liệu\ass2\src\ass2\ass2\obj\Debug\ass2.csproj.GenerateResource.cache
+C:\Users\Asus\Desktop\hệ cơ sở dư liệu\ass2\src\ass2\ass2\obj\Debug\ass2.csproj.CoreCompileInputs.cache
+C:\Users\Asus\Desktop\hệ cơ sở dư liệu\ass2\src\ass2\ass2\obj\Debug\ass2.exe
+C:\Users\Asus\Desktop\hệ cơ sở dư liệu\ass2\src\ass2\ass2\obj\Debug\ass2.pdb
+C:\Users\Asus\Desktop\hệ cơ sở dư liệu\ass2\src\ass2\ass2\obj\Debug\ass2.fBaoCao.resources
+C:\Users\Asus\Desktop\hệ cơ sở dư liệu\ass2\src\ass2\ass2\obj\Debug\ass2.fBaoVo.resources
+C:\Users\Asus\Desktop\hệ cơ sở dư liệu\ass2\src\ass2\ass2\obj\Debug\ass2.fHieu.resources
+C:\Users\Asus\Desktop\hệ cơ sở dư liệu\ass2\src\ass2\ass2\obj\Debug\ass2.fKhachHang.resources
