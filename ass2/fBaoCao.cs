@@ -26,6 +26,8 @@ namespace ass2
         {
             Employee em = EmployeeDAO.Instance.SelectNVByID(1);
             lbTenNV.Text = lbTenNV.Text+" "+ em.FName + " " + em.LName;
+            btThanhToan.Tag = Convert.ToInt32(1);
+            btAddKH.Tag = -1;
         }
 
         private void testc()
@@ -121,11 +123,85 @@ namespace ass2
         {
             lbTenKH.Text = "KH:"+e.Acc.Cells["Name"].Value.ToString();
             lbDiemKH.Text = "Đ:"+e.Acc.Cells["Poin"].Value.ToString();
+            btAddKH.Tag =Convert.ToInt32( e.Acc.Cells["ID"].Value.ToString());
         }
 
         private void btThanhToan_Click(object sender, EventArgs e)
         {
+            int total = 0;
+            foreach (ListViewItem item in lvItem.Items)
+            {
+                total += Convert.ToInt32(item.SubItems[3].Text);
+            }
 
+            string tota;
+            string cus;
+            string emp = btThanhToan.Tag.ToString();
+            if (total ==0)
+            {
+                MessageBox.Show("thanh toán lỗi", "thông báo", MessageBoxButtons.OK);
+                return;
+            }
+            else
+            {
+                tota = total.ToString();
+            }
+            if ((int)btAddKH.Tag ==-1)
+            {
+                cus = "NULL";
+            }
+            else
+            {
+                cus = btAddKH.Tag.ToString();
+            }
+            BillDAO.Instance.CreatBill(tota, cus, emp);
+            lvItem.Items.Clear();
+            
+        }
+
+ 
+
+        private void btLoad_Click(object sender, EventArgs e)
+        {
+            List < Bill > data = BillDAO.Instance.SelectAllBill();
+            dtgvBill.DataSource = data;
+        }
+
+        private void btxoa_Click(object sender, EventArgs e)
+        {
+            int idx = dtgvBill.SelectedCells[0].OwningRow.Index;
+            DataGridViewRow choose;
+            if (idx > -1)
+            {
+                 choose = dtgvBill.Rows[idx];
+            }
+            else
+            {
+                MessageBox.Show("vui long chon", "thong bao", MessageBoxButtons.OK);
+                return;
+            }
+            string id = choose.Cells["id"].Value.ToString();
+            BillDAO.Instance.DeleteById(id);
+            btLoad_Click(sender,e);
+
+        }
+
+        private void btCapnhat_Click(object sender, EventArgs e)
+        {
+            int idx = dtgvBill.SelectedCells[0].OwningRow.Index;
+            DataGridViewRow choose;
+            if (idx > -1)
+            {
+                choose = dtgvBill.Rows[idx];
+            }
+            else
+            {
+                MessageBox.Show("vui long chon", "thong bao", MessageBoxButtons.OK);
+                return;
+            }
+            fcapnhat f = new fcapnhat(choose);
+            f.ShowDialog();
+            btLoad_Click(sender, e);
         }
     }
 }

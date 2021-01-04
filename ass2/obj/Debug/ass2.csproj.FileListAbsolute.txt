@@ -12,3 +12,4 @@ C:\Users\Asus\Desktop\hệ cơ sở dư liệu\ass2\src\ass2\ass2\obj\Debug\ass2
 C:\Users\Asus\Desktop\hệ cơ sở dư liệu\ass2\src\ass2\ass2\obj\Debug\ass2.fBaoVo.resources
 C:\Users\Asus\Desktop\hệ cơ sở dư liệu\ass2\src\ass2\ass2\obj\Debug\ass2.fHieu.resources
 C:\Users\Asus\Desktop\hệ cơ sở dư liệu\ass2\src\ass2\ass2\obj\Debug\ass2.fKhachHang.resources
+C:\Users\Asus\Desktop\hệ cơ sở dư liệu\ass2\src\ass2\ass2\obj\Debug\ass2.fcapnhat.resources

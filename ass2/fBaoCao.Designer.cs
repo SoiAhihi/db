@@ -28,7 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.btCapnhat = new System.Windows.Forms.Button();
+            this.btLoad = new System.Windows.Forms.Button();
+            this.btxoa = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.dtgvBill = new System.Windows.Forms.DataGridView();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lbDiemKH = new System.Windows.Forms.Label();
@@ -42,34 +48,96 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tbItem = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.pbItem = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lvItem = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tabControl1.SuspendLayout();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.pbItem = new System.Windows.Forms.PictureBox();
+            this.tabPage2.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvBill)).BeginInit();
             this.tabPage1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbItem)).BeginInit();
             this.panel1.SuspendLayout();
+            this.tabControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbItem)).BeginInit();
             this.SuspendLayout();
             // 
-            // tabControl1
+            // tabPage2
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.Location = new System.Drawing.Point(0, 0);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(800, 450);
-            this.tabControl1.TabIndex = 0;
+            this.tabPage2.Controls.Add(this.panel5);
+            this.tabPage2.Controls.Add(this.panel4);
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(792, 421);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "BillTable";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.btCapnhat);
+            this.panel5.Controls.Add(this.btLoad);
+            this.panel5.Controls.Add(this.btxoa);
+            this.panel5.Location = new System.Drawing.Point(3, 313);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(786, 100);
+            this.panel5.TabIndex = 1;
+            // 
+            // btCapnhat
+            // 
+            this.btCapnhat.Location = new System.Drawing.Point(472, 42);
+            this.btCapnhat.Name = "btCapnhat";
+            this.btCapnhat.Size = new System.Drawing.Size(109, 23);
+            this.btCapnhat.TabIndex = 0;
+            this.btCapnhat.Text = "Cập nhật";
+            this.btCapnhat.UseVisualStyleBackColor = true;
+            this.btCapnhat.Click += new System.EventHandler(this.btCapnhat_Click);
+            // 
+            // btLoad
+            // 
+            this.btLoad.Location = new System.Drawing.Point(176, 42);
+            this.btLoad.Name = "btLoad";
+            this.btLoad.Size = new System.Drawing.Size(104, 23);
+            this.btLoad.TabIndex = 0;
+            this.btLoad.Text = "Hiển thị";
+            this.btLoad.UseVisualStyleBackColor = true;
+            this.btLoad.Click += new System.EventHandler(this.btLoad_Click);
+            // 
+            // btxoa
+            // 
+            this.btxoa.Location = new System.Drawing.Point(337, 42);
+            this.btxoa.Name = "btxoa";
+            this.btxoa.Size = new System.Drawing.Size(75, 23);
+            this.btxoa.TabIndex = 0;
+            this.btxoa.Text = "Xóa";
+            this.btxoa.UseVisualStyleBackColor = true;
+            this.btxoa.Click += new System.EventHandler(this.btxoa_Click);
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.dtgvBill);
+            this.panel4.Location = new System.Drawing.Point(3, 3);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(786, 305);
+            this.panel4.TabIndex = 0;
+            // 
+            // dtgvBill
+            // 
+            this.dtgvBill.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvBill.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dtgvBill.Location = new System.Drawing.Point(0, 0);
+            this.dtgvBill.Name = "dtgvBill";
+            this.dtgvBill.RowHeadersWidth = 51;
+            this.dtgvBill.RowTemplate.Height = 24;
+            this.dtgvBill.Size = new System.Drawing.Size(786, 305);
+            this.dtgvBill.TabIndex = 0;
             // 
             // tabPage1
             // 
@@ -203,16 +271,6 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Mã";
             // 
-            // pbItem
-            // 
-            this.pbItem.Location = new System.Drawing.Point(3, 3);
-            this.pbItem.Name = "pbItem";
-            this.pbItem.Size = new System.Drawing.Size(224, 175);
-            this.pbItem.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbItem.TabIndex = 0;
-            this.pbItem.TabStop = false;
-            this.pbItem.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.lvItem);
@@ -259,25 +317,26 @@
             this.columnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.columnHeader4.Width = 150;
             // 
-            // tabPage2
+            // tabControl1
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(792, 421);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl1.Location = new System.Drawing.Point(0, 0);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(800, 450);
+            this.tabControl1.TabIndex = 0;
             // 
-            // tabPage3
+            // pbItem
             // 
-            this.tabPage3.Location = new System.Drawing.Point(4, 25);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(792, 421);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "tabPage3";
-            this.tabPage3.UseVisualStyleBackColor = true;
+            this.pbItem.Location = new System.Drawing.Point(3, 3);
+            this.pbItem.Name = "pbItem";
+            this.pbItem.Size = new System.Drawing.Size(224, 175);
+            this.pbItem.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbItem.TabIndex = 0;
+            this.pbItem.TabStop = false;
+            this.pbItem.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // fBaoCao
             // 
@@ -289,41 +348,50 @@
             this.Name = "fBaoCao";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "fBaoCao";
-            this.tabControl1.ResumeLayout(false);
+            this.tabPage2.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvBill)).EndInit();
             this.tabPage1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbItem)).EndInit();
             this.panel1.ResumeLayout(false);
+            this.tabControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbItem)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Button btCapnhat;
+        private System.Windows.Forms.Button btLoad;
+        private System.Windows.Forms.Button btxoa;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.DataGridView dtgvBill;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label lbDiemKH;
+        private System.Windows.Forms.Button btAddKH;
+        private System.Windows.Forms.Button btThanhToan;
+        private System.Windows.Forms.Label lbTenKH;
+        private System.Windows.Forms.Label lbTenNV;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button btAdd;
+        private System.Windows.Forms.TextBox tbSoluong;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox tbItem;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pbItem;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ListView lvItem;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.PictureBox pbItem;
-        private System.Windows.Forms.Button btAddKH;
-        private System.Windows.Forms.Button btThanhToan;
-        private System.Windows.Forms.Label lbTenKH;
-        private System.Windows.Forms.Label lbTenNV;
-        private System.Windows.Forms.Button btAdd;
-        private System.Windows.Forms.TextBox tbSoluong;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox tbItem;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.Label lbDiemKH;
+        private System.Windows.Forms.TabControl tabControl1;
     }
 }
