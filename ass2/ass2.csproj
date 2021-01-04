@@ -125,6 +125,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="photo\1003.jpg" />
+    <None Include="Resources\icons8-search-24.png" />
+    <None Include="Resources\back.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="photo\1001.jpg" />

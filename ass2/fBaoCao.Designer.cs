@@ -122,6 +122,7 @@
             this.btThanhToan.TabIndex = 2;
             this.btThanhToan.Text = "Thanh toán";
             this.btThanhToan.UseVisualStyleBackColor = true;
+            this.btThanhToan.Click += new System.EventHandler(this.btThanhToan_Click);
             // 
             // lbTenKH
             // 
@@ -167,7 +168,7 @@
             // tbSoluong
             // 
             this.tbSoluong.Location = new System.Drawing.Point(66, 217);
-            this.tbSoluong.MaxLength = 2;
+            this.tbSoluong.MaxLength = 3;
             this.tbSoluong.Name = "tbSoluong";
             this.tbSoluong.ReadOnly = true;
             this.tbSoluong.Size = new System.Drawing.Size(161, 22);

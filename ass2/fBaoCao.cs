@@ -24,7 +24,7 @@ namespace ass2
 
         private void loadNV()
         {
-            Employee em = EmployeeDAO.Instance.SelectNVByID(2);
+            Employee em = EmployeeDAO.Instance.SelectNVByID(1);
             lbTenNV.Text = lbTenNV.Text+" "+ em.FName + " " + em.LName;
         }
 
@@ -113,7 +113,19 @@ namespace ass2
         private void btAddKH_Click(object sender, EventArgs e)
         {
             fKhachHang f = new fKhachHang();
+            f.GetAccount += F_GetAccount;
             f.ShowDialog();
+        }
+
+        private void F_GetAccount(object sender, AccountEvent e)
+        {
+            lbTenKH.Text = "KH:"+e.Acc.Cells["Name"].Value.ToString();
+            lbDiemKH.Text = "Đ:"+e.Acc.Cells["Poin"].Value.ToString();
+        }
+
+        private void btThanhToan_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

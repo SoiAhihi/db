@@ -74,7 +74,44 @@ namespace ass2
 
         private void tbChon_Click(object sender, EventArgs e)
         {
-            this.Close();
+            try
+            {
+                int idx = dtgvKH.SelectedCells[0].OwningRow.Index;
+                if (idx > -1)
+                {
+                    DataGridViewRow choose = dtgvKH.Rows[idx];
+                    if (getAccount != null)
+                    {
+                        getAccount(this, new AccountEvent(choose));
+                    }
+                }
+                this.Close();
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Vui lòng chọn khách hàng!", "Thông báo", MessageBoxButtons.OK);
+            }
+            
+            
+        }
+        private event EventHandler<AccountEvent> getAccount;
+        public event EventHandler<AccountEvent> GetAccount
+        {
+            add { getAccount += value; }
+            remove { getAccount -= value; }
+        }
+        
+
+    }
+    public class AccountEvent : EventArgs
+    {
+        private DataGridViewRow acc;
+
+        internal DataGridViewRow Acc { get => acc; set => acc = value; }
+        internal AccountEvent(DataGridViewRow acc)
+        {
+            this.acc = acc;
         }
     }
 }
